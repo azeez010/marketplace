@@ -1,0 +1,16 @@
+{% extends "./base.html"%}
+{% block title %}Admin tab{% endblock %}
+{% block content %}
+    <div>
+        <h1 class="">Predictions</h1>
+    </div>
+
+{% endblock %}
+
+{% if alert %}
+    <a class="md:mx-0 text-yellow-600 md:text-lg sm:text-lg sm:center sm:px-4 sm:py-2 font-normal sm:block md:inline" href="{{url_for('new_request')}}">Requests <span class="text-red-500">NEW!</span></a>
+    {% else %}
+    <a class="md:mx-0 text-yellow-600 md:text-lg sm:text-lg sm:center sm:px-4 sm:py-2 font-normal sm:block md:inline" href="{{url_for('new_request')}}">Requests</a>
+    {% endif %}
+
+                            
